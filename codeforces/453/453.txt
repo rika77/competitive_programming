@@ -1,0 +1,7 @@
+B Coloring a tree
+Interesting!
+まず全て違う色で塗るならn回作業必要だけど
+
+sub_tree以下全て塗りつぶすっていう場合、
+連結なら作業一回しなくて済むのだ
+

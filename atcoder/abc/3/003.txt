@@ -1,0 +1,12 @@
+B 文章が長くなる時は適当なところで改行しないとdebug等が面倒。
+
+string を使うと、大きさ指定しなくていいし、.lengthで長さ取得できる。library string
+
+C 
+<algorithm>
+<functional>
+sort(a,a+n,greater<int>());
+double型のは%lfなら確実
+
+D
+満点は難しいらしい
