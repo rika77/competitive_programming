@@ -1,3 +1,1 @@
 # competetive programming
-# procon
-# procon
