@@ -3,37 +3,45 @@
 #include<string>
 #include<cmath>
 #include<algorithm>
+#include<vector>
 using namespace std;
 
 int main() {
 	int n;
-	double h;
-	double a[n],b[n];
+	int h;
+	int a;
+	vector<int> b;
 	cin >>n>>h;
 
-	double maxa = 0.0;
+	int ma = 0;
 	for (int i=0;i<n;i++) {
-	cin >> a[i] >> b[i];
-	maxa = max(maxa, a[i]);
+	cin >> a;
+	int sub;
+	cin >> sub;
+	b.push_back(sub);
+	ma = max(ma, a);
 	}
 
-	sort(b,b+n);
-	reverse(b,b+n);
+	sort(b.begin(),b.end());
+	reverse(b.begin(), b.end());
 	int cnt = 0;
 
 	for (int i=0;i<n;i++) {
-	if (h<=0.0) {
-	cout << cnt << endl;
-	return 0;
-	}
-	if (b[i]>maxa) {
+	
+	if (b[i]>ma) {
 	h -= b[i];
 	cnt++;
 //	cout << cnt << endl;
+	} 
+	if (h<=0) {
+	cout << cnt << endl;
+	return 0;
 	}
 	} 	
-//	cout << h << maxa << endl;
-	cnt += ceil(h/maxa);
+	cnt += h/ma;
+	if (h%ma){
+		cnt++;
+	}
 	cout << cnt << endl;
 
 	return 0;

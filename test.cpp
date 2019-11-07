@@ -1,2 +1,0 @@
-ntah
-kamekafnkjwj
